@@ -19,3 +19,18 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Vue Router
+
+``` bash
+# 安裝指令
+npm install vue-router --save
+
+# 進入點
+main.js
+
+# Router 配置檔案 (前端路由 ; 在 src 裡新建資料夾 router)
+router/index.js
+
+# 分頁內容
+Vue Components (**.vue)

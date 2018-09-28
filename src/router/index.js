@@ -15,6 +15,8 @@ Vue.use(VueRouter);
 
 // 匯出給 entry (main.js) 使用，定義路徑
 export default new VueRouter({
+    // mode: 'history' // 須配合後端
+    linkActiveClass: 'active',
     routes: [{
         name: '首頁',
         path: '/index', // 對應的虛擬路徑

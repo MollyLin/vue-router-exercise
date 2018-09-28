@@ -8,6 +8,7 @@ import Page from '@/components/pages/page';
 import child from '@/components/pages/child';
 import child2 from '@/components/pages/child2';
 import child3 from '@/components/pages/child3';
+import Menu from '@/components/pages/menu';
 
 // 啟用
 Vue.use(VueRouter);
@@ -19,9 +20,13 @@ export default new VueRouter({
         path: '/index', // 對應的虛擬路徑
         component: Home, // 對應的元件
     }, {
-        name: '頁面',
+        // name: '頁面',
         path: '/page',
-        component: Page,
+        //component: Page,
+        components: {
+            default: Page, // 對應無使用name的router-view from app.vue
+            menu: Menu, //對應到router-view的name 為menu from app.vue
+        },
         children: [{
                 name: 'Card 1',
                 path: '',
@@ -34,7 +39,7 @@ export default new VueRouter({
             },
             {
                 name: 'Card 3',
-                path: 'child/:id',
+                path: 'child3',
                 component: child3
             }
         ]

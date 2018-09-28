@@ -15,9 +15,14 @@
       </ul>
     </div>
   </nav>
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <!-- <HelloWorld/> -->
-    <router-view></router-view>
+    <!-- 自訂的 router-view -->
+    <router-view name="menu"></router-view>
+    <div class="container">
+      <!-- 預設的 router-view -->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

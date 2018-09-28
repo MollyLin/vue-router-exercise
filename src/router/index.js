@@ -34,7 +34,7 @@ export default new VueRouter({
             },
             {
                 name: 'Card 3',
-                path: 'child3',
+                path: 'child/:id',
                 component: child3
             }
         ]

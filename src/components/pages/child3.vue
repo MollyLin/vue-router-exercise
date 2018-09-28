@@ -14,8 +14,15 @@ export default {
   data () {
     return {
     }
+  },
+  created() {
+      // 讀取route裡的參數裡的id
+      // ex: id="epogkpr"
+      console.log(this.$route.params.id);
+      const id = this.$route.params.id;
+      this.$http.get(`https://randomuser.me/api/?seed=${id}`).then((response) => {
+          console.log(response);
+      })
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
